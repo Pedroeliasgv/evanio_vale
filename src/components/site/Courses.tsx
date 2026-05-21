@@ -28,7 +28,7 @@ export function Courses() {
         eyebrow="Formação"
         title={
           <>
-            Cursos e <BlueText>Seminários</BlueText>
+            CURSOS E <BlueText>SEMINÁRIOS</BlueText>
           </>
         }
         subtitle="Conteúdos aprofundados para quem deseja crescer espiritualmente com direção."

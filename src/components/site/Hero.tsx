@@ -36,11 +36,11 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-5xl leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            Sonhos são{" "}
+            SONHOS SÃO{" "}
             <span className="bg-gradient-to-r from-sky-300 via-blue-400 to-cyan-200 bg-clip-text italic text-transparent">
-              informações
+              INFORMAÇÕES
             </span>{" "}
-            privilegiadas
+            PRIVILEGIADAS
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
