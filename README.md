@@ -1,74 +1,103 @@
-# React + TypeScript + Vite
+# 🌌 Profeta Evanio Vale — Site Oficial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>Site institucional premium desenvolvido para o ministério do Profeta Evanio Vale.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  Uma experiência digital moderna, responsiva e elegante para apresentar o ministério, conteúdos, cursos, eventos e canais de contato.
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Visão Geral
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este projeto é o site oficial do **Profeta Evanio Vale**, desenvolvido com foco em transmitir:
 
-## Expanding the ESLint configuration
+- Autoridade espiritual
+- Presença ministerial
+- Profissionalismo digital
+- Clareza na comunicação
+- Conversão para eventos, cursos e contato
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O site foi pensado para ser mais do que uma página de links. Ele funciona como uma presença institucional completa para o ministério.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎯 Objetivo do Projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O principal objetivo do site é centralizar e apresentar de forma profissional:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Ministério do Profeta Evanio Vale
+- Pregações e mensagens
+- Interpretação de sonhos
+- Cursos e seminários
+- Evento “A Mesa”
+- Conteúdos no YouTube e redes sociais
+- Canal de contato pelo WhatsApp
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# evanio_vale
+## 🖥️ Preview das Seções
+
+O site conta com as seguintes áreas:
+
+### 🏠 Início
+
+Hero section com chamada principal, imagem de destaque e botões de ação.
+
+### 🙏 Sobre
+
+Apresentação do Profeta Evanio Vale e do propósito ministerial.
+
+### 📊 Autoridade
+
+Números de alcance nas redes sociais, reforçando presença e impacto digital.
+
+### 🔥 Ministério
+
+Áreas principais do ministério:
+
+- Pregações
+- Interpretação de sonhos
+- Oração e libertação
+- Dons espirituais
+
+### 🎓 Cursos e Seminários
+
+Cards de acesso para formações e conteúdos pagos.
+
+### 📅 Eventos
+
+Área dedicada ao evento **“A Mesa”**, com botão direto para inscrição.
+
+### ▶️ Conteúdos
+
+Seção com canais digitais como YouTube, Instagram, TikTok, Kwai e playlist Pode Fé.
+
+### 💬 Contato
+
+Canal direto pelo WhatsApp para convites, agenda, cursos e pedidos de oração.
+
+---
+
+## 🎨 Identidade Visual
+
+A identidade visual do projeto segue uma estética:
+
+- Gospel premium
+- Moderna
+- Profissional
+- Minimalista
+- Cinematográfica
+- Com paleta azul escura e tons luminosos
+
+### Paleta principal
+
+```txt
+Background escuro: #020617
+Azul principal: #3B82F6
+Azul claro: #38BDF8
+Ciano: #67E8F9
+Texto claro: #F8FAFC
+Texto secundário: #94A3B8
