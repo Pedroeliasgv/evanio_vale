@@ -1,211 +1,284 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Sparkles, Video, Radio, ExternalLink } from "lucide-react";
+import {
+  ArrowRight,
+  Play,
+  Video,
+  Radio,
+  MessageCircle,
+  Sparkles,
+} from "lucide-react";
 import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
-import { Section, SectionHeader, BlueText } from "./Section";
+import { Section, BlueText } from "./Section";
+import podeFeBg from "@/assets/pode-fe-logo.jpg";
+
+const playlistLink =
+  "https://youtube.com/playlist?list=PLFI2L1fzy7AndHFgVvuoj4sKj3xlD-vKJ";
 
 const channels = [
   {
     icon: FaYoutube,
     title: "YouTube",
-    text: "Pregações completas, ministrações e mensagens para aprofundar sua caminhada com Deus.",
+    text: "Pregações completas, ministrações e mensagens.",
     label: "Ministrações",
     href: "https://www.youtube.com/@profetaevaniovale",
   },
   {
     icon: Radio,
     title: "Pode Fé",
-    text: "Conteúdos especiais, conversas e reflexões sobre fé, direção espiritual e propósito.",
+    text: "Conversas, reflexões e conteúdos especiais sobre fé.",
     label: "Playlist",
-    href: "https://youtube.com/playlist?list=PLFI2L1fzy7AndHFgVvuoj4sKj3xlD-vKJ",
+    href: playlistLink,
   },
   {
     icon: FaInstagram,
     title: "Instagram",
-    text: "Cortes, mensagens rápidas, reflexões e conteúdos diários para fortalecer sua fé.",
+    text: "Cortes, mensagens rápidas e conteúdos diários.",
     label: "Diário",
     href: "https://www.instagram.com/evanio_vale",
   },
   {
     icon: FaTiktok,
     title: "TikTok",
-    text: "Vídeos curtos com palavras, ensinamentos, alertas espirituais e mensagens de edificação.",
+    text: "Vídeos curtos com palavras e ensinamentos.",
     label: "Vídeos curtos",
     href: "https://www.tiktok.com/@profetaevaniovale?lang=pt-BR",
   },
   {
     icon: Video,
     title: "Kwai",
-    text: "Mensagens rápidas, cortes e conteúdos espirituais para acompanhar no dia a dia.",
+    text: "Mensagens rápidas e cortes espirituais.",
     label: "Cortes",
-    href: " https://k.kwai.com/u/@EvanioVale/CxHwVewQ",
+    href: "https://k.kwai.com/u/@EvanioVale/CxHwVewQ",
   },
 ];
 
 export function Content() {
   return (
-    <Section id="conteudos" className="bg-card/20">
-      <div className="relative overflow-hidden rounded-[2.5rem] border border-sky-400/20 bg-gradient-to-br from-background via-card/40 to-background p-6 md:p-10 lg:p-12">
-        <div className="absolute -left-24 top-0 h-96 w-96 rounded-full bg-blue-500/15 blur-[120px]" />
-        <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-[120px]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent" />
+    <Section id="conteudos" className="overflow-hidden bg-background">
+      <div className="relative">
+        <div className="absolute -left-32 top-10 h-80 w-80 rounded-full bg-sky-400/10 blur-[130px]" />
+        <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-blue-500/10 blur-[140px]" />
 
-        <div className="relative">
-          <SectionHeader
-            eyebrow="Conteúdos"
-            title={
-              <>
-                Uma presença digital para{" "}
-                <BlueText>fortalecer sua fé</BlueText>
-              </>
-            }
-            subtitle="Acompanhe pregações, ministrações, ensinos, cortes e mensagens espirituais nas principais plataformas digitais."
-          />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mb-10">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-sky-300">
+              <Sparkles size={14} />
+              Conteúdos
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-[0.85fr_1fr] lg:items-end">
+              <h2 className="font-display text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
+                Mensagens que{" "}
+                <BlueText>acompanham sua caminhada</BlueText>
+              </h2>
+
+              <p className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg lg:ml-auto">
+                Pregações, cortes, conversas e reflexões espirituais distribuídas
+                nas plataformas oficiais do ministério.
+              </p>
+            </div>
+          </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 26 }}
+            initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 overflow-hidden rounded-[2rem] border border-sky-400/25 bg-gradient-to-br from-blue-500/15 via-card/70 to-background p-6 md:p-8"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7 }}
+            className="mb-12"
           >
-            <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
-              <div>
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-sky-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-sky-300">
-                  <Sparkles size={14} />
-                  Conteúdo em destaque
-                </div>
+            <div className="relative overflow-hidden rounded-[2.4rem] border border-sky-400/20 bg-[#020617] p-4 shadow-[0_35px_120px_rgba(59,130,246,0.12)] sm:p-6 lg:p-8">
+              <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-sky-400/10 blur-[120px]" />
+              <div className="absolute -right-20 bottom-10 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
 
-                  <a
-                    href="https://youtube.com/playlist?list=PLFI2L1fzy7AndHFgVvuoj4sKj3xlD-vKJ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3"
-                  >
-                    <h3 className="font-display text-4xl leading-tight md:text-5xl">
-                      Assista à playlist{" "}
-                      <span className="bg-gradient-to-r from-sky-300 via-blue-400 to-cyan-200 bg-clip-text text-transparent transition-all group-hover:brightness-125">
-                        Pode Fé
-                      </span>
-                    </h3>
+              <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <a
+                  href={playlistLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative mx-auto block w-full max-w-[440px] lg:max-w-[520px]"
+                >
+                  <div className="absolute -inset-4 rounded-[2.2rem] bg-sky-400/15 blur-3xl transition-all group-hover:bg-sky-400/20" />
 
-                    <ArrowRight
-                      size={28}
-                      className="hidden text-sky-300 transition-transform group-hover:translate-x-1 md:block"
-                    />
-                  </a>
+                  <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-background/70 p-2 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur">
+                    <div className="relative aspect-square overflow-hidden rounded-[1.5rem] bg-black">
+                      <img
+                        src={podeFeBg}
+                        alt="Logo Pode Fé"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
 
-                <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                  Uma seleção de conteúdos para quem deseja crescer na fé,
-                  receber direção espiritual e acompanhar mensagens do
-                  ministério em um formato simples, acessível e profundo.
-                </p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <a
-                    href="https://youtube.com/playlist?list=PLFI2L1fzy7AndHFgVvuoj4sKj3xlD-vKJ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-500 px-7 py-4 text-sm font-medium text-white shadow-[0_0_35px_rgba(59,130,246,0.35)] transition-all hover:bg-blue-400"
-                  >
-                    <Play size={16} />
-                    Assistir agora
-                    <ArrowRight
-                      size={16}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </a>
+                      <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/45 p-4 backdrop-blur-xl">
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.18em] text-sky-300">
+                            Podcast
+                          </p>
+                          <p className="font-display text-2xl text-white">
+                            Pode Fé
+                          </p>
+                        </div>
 
-                  <a
-                    href="#contato"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-400/25 bg-background/40 px-7 py-4 text-sm font-medium text-foreground backdrop-blur transition-all hover:border-sky-300/60"
-                  >
-                    Receber orientação
-                  </a>
-                </div>
-              </div>
-
-              <div className="relative min-h-[260px] overflow-hidden rounded-3xl border border-sky-400/20 bg-background/50 p-6">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.22),transparent_55%)]" />
-
-                <div className="relative flex h-full min-h-[220px] flex-col justify-between">
-                  <div className="flex items-center justify-between">
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300">
-                      <FaYoutube size={30} />
+                        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-background">
+                          <Play size={21} className="ml-1 fill-background" />
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                </a>
 
-                    <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs text-sky-300">
-                      YouTube
-                    </span>
+                <div className="space-y-6 text-center lg:text-left">
+                  <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] text-sky-300 lg:mx-0">
+                    <Radio size={14} />
+                    Podcast em destaque
                   </div>
 
                   <div>
-                    <p className="font-display text-3xl">Pode Fé</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      Conteúdos para fortalecer sua fé e ampliar sua visão
-                      espiritual.
+                    <h3 className="font-display text-5xl leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
+                      Pode{" "}
+                      <span className="bg-gradient-to-r from-sky-300 via-blue-400 to-cyan-200 bg-clip-text italic text-transparent">
+                        Fé
+                      </span>
+                    </h3>
+
+                    <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground lg:mx-0">
+                      Uma playlist especial para fortalecer sua fé, ampliar sua
+                      visão espiritual e acompanhar mensagens profundas do
+                      ministério.
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm font-medium text-sky-300">
-                    <span>Acessar playlist</span>
-                    <ExternalLink size={15} />
+                  <div className="flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+                    <a
+                      href={playlistLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-center gap-2 rounded-full bg-blue-500 px-7 py-4 text-sm font-medium text-white shadow-[0_0_35px_rgba(59,130,246,0.30)] transition-all hover:bg-blue-400"
+                    >
+                      <Play size={16} />
+                      Assistir agora
+                      <ArrowRight
+                        size={16}
+                        className="transition-transform group-hover:translate-x-1"
+                      />
+                    </a>
+
+                    <a
+                      href="#contato"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-400/25 bg-background/40 px-7 py-4 text-sm font-medium text-foreground backdrop-blur transition-all hover:border-sky-300/60"
+                    >
+                      <MessageCircle size={16} className="text-sky-300" />
+                      Receber orientação
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {channels.map((channel, index) => {
-              const Icon = channel.icon;
+          <div className="-mx-6 px-6">
+            <div className="mb-5 flex items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-300">
+                  Canais oficiais
+                </p>
+                <h3 className="mt-2 font-display text-3xl">
+                  Acompanhe onde estiver
+                </h3>
+              </div>
 
-              return (
-                <motion.a
-                  key={channel.title}
-                  href={channel.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 26 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.55, delay: index * 0.08 }}
-                  className="group relative overflow-hidden rounded-3xl border border-border bg-background/55 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-sky-400/50 hover:bg-card/80"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-sky-400/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <span className="hidden text-sm text-muted-foreground sm:block">
+                arraste para ver →
+              </span>
+            </div>
 
-                  <div className="relative">
-                    <div className="mb-5 flex items-center justify-between gap-4">
-                      <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-400/20 bg-sky-400/10 text-sky-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-sky-400/20">
-                        <Icon size={26} />
+            <div className="flex snap-x gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:snap-none lg:grid-cols-5 lg:overflow-visible lg:pb-0">
+              {channels.map((channel, index) => {
+                const Icon = channel.icon;
+
+                return (
+                  <motion.a
+                    key={channel.title}
+                    href={channel.href.trim()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-70px" }}
+                    transition={{ duration: 0.5, delay: index * 0.06 }}
+                    className="group relative min-h-[245px] w-[82vw] shrink-0 snap-start overflow-hidden rounded-[1.7rem] border border-white/10 bg-card/35 p-5 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-sky-400/35 hover:bg-card/50 sm:w-[340px] lg:w-auto"
+                  >
+                    <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-sky-400/10 blur-3xl transition-all group-hover:bg-sky-400/15" />
+
+                    <div className="relative flex h-full flex-col justify-between">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-400/15 bg-sky-400/[0.06] text-sky-300">
+                          <Icon size={26} />
+                        </div>
+
+                        <span className="rounded-full border border-sky-400/15 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-sky-300">
+                          {channel.label}
+                        </span>
                       </div>
 
-                      <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-[11px] font-medium text-sky-300">
-                        {channel.label}
-                      </span>
+                      <div className="mt-8">
+                        <h4 className="font-display text-3xl text-foreground">
+                          {channel.title}
+                        </h4>
+
+                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                          {channel.text}
+                        </p>
+                      </div>
+
+                      <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span className="text-sm font-medium text-sky-300">
+                          Acessar canal
+                        </span>
+
+                        <ArrowRight
+                          size={16}
+                          className="text-sky-300 transition-transform group-hover:translate-x-1"
+                        />
+                      </div>
                     </div>
+                  </motion.a>
+                );
+              })}
 
-                    <h3 className="font-display text-2xl leading-tight text-foreground">
-                      {channel.title}
-                    </h3>
-
-                    <p className="mt-4 min-h-[88px] text-sm leading-relaxed text-muted-foreground">
-                      {channel.text}
-                    </p>
-
-                    <div className="mt-6 flex items-center justify-between border-t border-border/70 pt-5">
-                      <span className="text-sm font-medium text-sky-300">
-                        Acompanhar
-                      </span>
-
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-400/10 text-sky-300 transition-transform group-hover:translate-x-1">
-                        <ArrowRight size={15} />
-                      </span>
-                    </div>
+              <motion.a
+                href="#contato"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-70px" }}
+                transition={{ duration: 0.5, delay: 0.34 }}
+                className="group relative min-h-[245px] w-[82vw] shrink-0 snap-start overflow-hidden rounded-[1.7rem] border border-sky-400/20 bg-sky-400/[0.06] p-5 transition-all hover:-translate-y-1 hover:border-sky-400/40 sm:w-[340px] lg:hidden"
+              >
+                <div className="flex h-full flex-col justify-between">
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-400/15 bg-background/40 text-sky-300">
+                    <MessageCircle size={26} />
                   </div>
-                </motion.a>
-              );
-            })}
+
+                  <div>
+                    <h4 className="font-display text-3xl">
+                      Precisa de orientação?
+                    </h4>
+
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      Fale com o ministério para dúvidas, convites e pedidos de
+                      oração.
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between border-t border-white/10 pt-4">
+                    <span className="text-sm font-medium text-sky-300">
+                      Falar agora
+                    </span>
+                    <ArrowRight size={16} className="text-sky-300" />
+                  </div>
+                </div>
+              </motion.a>
+            </div>
           </div>
         </div>
       </div>
